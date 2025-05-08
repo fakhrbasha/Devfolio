@@ -1,0 +1,537 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+html{
+    scroll-padding: 70px;
+}
+:root
+{
+
+    --colors : rgb(75, 156, 241);
+    --darkercolor : rgb(0, 120, 255);
+    --main-color : #000; 
+    --font-primary : system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background-color: rgb(245, 245, 245);
+}
+.header{
+    background-color: var(--colors);
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right ,rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/hero-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.navbar{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.bgc{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.navbar-collapse {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 100;
+    font-weight: bold;
+}
+.navbar-collapse a {
+    margin-left: 10px;
+}
+.navbar .nav-link.activee , .navbar .nav-link.elfakhr {
+    color: white;
+    position: relative;
+}
+nav .active{
+    position: relative;
+}
+nav .active::after{
+    color: red !important; 
+    content: "" !important;
+    position: absolute !important;
+    background-color: rgb(255, 255, 255) !important;
+    width: 60px !important;
+    height: 2px !important;
+    bottom: -2px !important;
+    left: 7px;
+    transition: width 0.3s ease !important;
+}
+.navbar .nav-link.activee::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 60px;
+    height: 2px;
+    bottom: -2px;
+    left: 7px;
+    transition: width 0.3s ease;
+}
+.navbar .nav-link.elfakhr::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 7px;
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-link.elfakhr:hover::after {
+    width: 60px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    color: white;
+    padding-top: 290px;
+}
+.content h3{
+    font-size: 30px;
+}
+.content h4{
+    font-size: 20px;
+}
+.animatedtxt{
+    font-family: "Quicksand", sans-serif;
+    font-size: 35px;
+    margin-right: 90px;
+}
+.animatedtxt span{
+    font-family: "Quicksand", sans-serif;
+    font-size: 40px;
+    position: relative;
+}
+.animatedtxt span::before{
+    content: "";
+    font-weight: bold;
+    color: white;
+    animation: words 8s infinite;
+}
+.animatedtxt span::after{
+    content: "";
+    font-weight: bold;
+    position: absolute;
+    width: calc(100%);
+    height: 100%;
+    border-left: 2px solid white;
+    right: -8px;
+    animation: cursor 1s infinite, typing 8s steps(14) infinite;
+}
+/* Freelancer| */
+.dropdown-submenu{
+    position: relative;
+}
+.dropdown-submenu > .dropdown-menu{
+    display: none;
+    position: absolute;
+    right: 100%;
+    top: 50%;
+}
+.dropdown-submenu:hover >.dropdown-menu{
+    display: block;
+}
+
+/* about */
+
+.about{
+    margin-top: 100px;
+}
+.name{
+    line-height: 2px;
+}
+.name span{
+    font-weight: 200;
+    font-size: 15px;
+}
+.name h5{
+    font-size: 20px;
+}
+.ab {
+    position: relative;
+  }
+  
+  .ab::after {
+    content: "";
+    width: 20%;
+    height:3px;
+    background-color: rgb(75, 156, 241);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    display: block;
+  }
+  .par{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+  }
+  #service{
+    padding-bottom: 50px;
+  }
+#service h2{
+    padding-top: 100px;
+    font-size: 50px;
+}
+#service p {
+    position: relative;
+}
+.ser{
+    margin-top: 50px;
+}
+#service h2+p::after {
+    content: "";
+    width: 50px;
+    height: 5px;
+    background-color: rgb(75, 156, 241);
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+}
+.outerbox{
+    height: 300px;
+}
+
+.innerbox{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 10px solid rgb(0, 120, 255);
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: 0.4s;
+}
+.innerbox i{
+    font-size: 40px;
+}
+.outerbox:hover .innerbox {
+    background-color: rgb(0, 120, 255);
+    border: 10px solid rgba(243, 243, 243, 0.9);
+    color: white;
+}
+/*  */
+.halfback{
+    height: auto;
+    background-image: linear-gradient(to right ,rgba(0, 102, 255, 0.5), rgba(0, 67, 250, 0.5)), url('/img/counters-bg.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+.cirrr{
+    height: 100px;
+    width:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    border: 10px solid rgb(205, 225, 248);
+}
+.onc{
+    margin-left: 50px;
+}
+.tc{
+    margin-left:11px;
+}
+.cirrr i{
+    font-size: 30px;
+}
+.halfback p{
+    color: white;
+    font-size: 20px;
+}
+.hour i{
+    font-size: 100px;
+    color: rgb(205, 225, 248);
+}
+
+/* Portfolio */
+
+.Portfolio h2{
+    padding-top: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+}
+.Portfolio p{
+    position: relative;
+}
+.Portfolio h2+p::after{
+    content: "";
+    width: 50px;
+    height: 5px;
+    background-color: rgb(75, 156, 241);
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+}
+.cardimg{
+    overflow: hidden;
+    height: auto;
+}
+.card img {
+    width: 100%;
+    transition: 0.5s;
+    object-fit: contain;
+
+    &:hover{
+        transform: scale(1.5);
+    }
+}
+.cardd .row{
+    margin-top: 80px;
+}
+.card-body{
+    font-size: 12px;
+    padding-bottom: 0;
+    position: relative;
+}
+.card-body span{
+    color: var(--colors);
+
+}
+.card-body .bott i {
+font-size: 40px;
+position: absolute;
+bottom: 25px;
+right:20px;
+color: var(--darkercolor) ;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+/*  */
+.bck{
+    width: 100%;
+    height: 70vh;
+    background-image: linear-gradient(to bottom ,rgba(25, 108, 216,0.7),rgba(25, 108, 216,0.7)), url('/img/overlay-bg.jpg');
+    background-position: center center;
+    background-color:rgb(70, 151, 237);
+    background-attachment: fixed;
+    color: white;
+}
+.carousel-indicators [data-bs-target] {
+    padding: 0;
+    margin-top: -20px;
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+/*  */
+.blog p{
+    position: relative;
+}
+.blog h3+p::after {
+    content: "";
+    width: 50px;
+    height: 5px;
+    background-color: rgb(75, 156, 241);
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+}
+.txtt a ,.imgname a{
+    color: black;
+    transition: 0.5s;
+}
+.txtt a:hover , .lastc a:hover{
+    color: rgb(39, 121, 243);
+
+}
+
+
+/*  */
+
+
+.imgn{
+    width: 35px;
+}
+.fakhr
+{
+    position: relative;
+}
+.travel{
+    position: absolute;
+    z-index: 2;
+    margin-left: 130px;
+    width: 100px;
+    height: 30px;
+}
+.travel h6{
+    font-family: var(--font-primary);
+    font-size: 12px;
+    font-weight: 500;
+    padding-top: 7px;
+}
+
+/* last page */
+
+.lastpage{
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(to bottom ,rgba(25, 108, 216,0.7),rgba(25, 108, 216,0.7)), url('/img/overlay-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.frm h2{
+    position: relative;
+}
+.frm h2::after{
+    content: "";
+    width: 130px;
+    height: 5px;
+    position: absolute;
+    background-color: var(--colors);
+    left: 0;
+    bottom: -15px;
+}
+.fakhrbtn{
+    width: 150px;
+    height: 40px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+.fakhrbtn:hover{
+    background-color: rgb(70, 137, 236);
+    color: white;
+    cursor: pointer;
+}
+.get h2{
+    position: relative;
+}
+.get h2::after{
+    content: "";
+    width: 130px;
+    height: 5px;
+    position: absolute;
+    background-color: var(--colors);
+    left: 0;
+    bottom: -15px;
+}
+
+/* border p-2 border-3 rounded-circle border-primary fs-3 */
+.fa-facebook , .fa-instagram , .fa-twitter , .fa-linkedin{
+    font-size: 25px;
+    border : 3px solid var(--colors);
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.fa-facebook:hover , .fa-instagram:hover , .fa-twitter:hover , .fa-linkedin:hover{
+    color: white;
+    background-color: var(--colors);
+    border : 3px solid rgb(189, 204, 228);
+}
+
+/* footer */
+
+.footer{
+    width: 100%;
+    height: auto;
+    background-color: rgb(14, 86, 180);
+}
+.l .photo{
+    display: flex;
+    flex-direction: column;
+}
+.ser .row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.ser .row .forg{
+    margin-top: 20px;
+    
+}
+.halfback{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.blogg{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*  MQ */
+
+@media (min-width: 640px){
+
+}
+/* medium devices */
+@media (min-width: 768px){
+    .l .photo{
+        display: flex;
+        flex-direction: row;
+    }
+    .ser .row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        margin-top: -100px;
+    }
+    .halfback{
+        display: flex;
+        flex-direction: row;
+    }
+    .travel{
+        margin-left: 150px;
+    }
+    .content h3{
+        font-size: 70px;
+    }
+    .content h4{
+        font-size: 50px;
+    }
+}
+/* large devices */
+@media (min-width: 1024px){
+    
+
+}
+/* extra large devices */
+@media (min-width: 1280px){
+
+}
+/* extra extra large devices */
+@media (min-width: 1536px){
+
+}
