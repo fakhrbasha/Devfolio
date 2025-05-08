@@ -20,11 +20,10 @@ body{
     background-color: rgb(245, 245, 245);
 }
 .header{
+    background-color: var(--colors);
     width: 100%;
     height: 100vh;
-    /* background-color: red; */
-    /* background-image: linear-gradient(to right ,rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./img/hero-bg.jpg'); */
-    /* background-image: linear-gradient(to right ,rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/hero-bg.jpg'); */
+    background-image: linear-gradient(to right ,rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/hero-bg.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -150,6 +149,11 @@ nav .active::after{
 
 .about{
     margin-top: 100px;
+    height: auto;
+}
+.pto{
+    width: 150px;
+    height: 150px;
 }
 .name{
     line-height: 2px;
@@ -205,7 +209,8 @@ nav .active::after{
     display: block;
 }
 .outerbox{
-    height: 300px;
+    /* height: 300px; */
+    height: auto;
 }
 
 .innerbox{
@@ -234,7 +239,7 @@ nav .active::after{
 /*  */
 .halfback{
     height: auto;
-    background-image: linear-gradient(to right ,rgba(0, 102, 255, 0.5), rgba(0, 67, 250, 0.5)), url('../img/counters-bg.jpg');
+    background-image: linear-gradient(to right ,rgba(0, 102, 255, 0.5), rgba(0, 67, 250, 0.5)), url('/img/counters-bg.jpg');
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -331,7 +336,7 @@ color: var(--darkercolor) ;
 .bck{
     width: 100%;
     height: 70vh;
-    background-image: linear-gradient(to bottom ,rgba(25, 108, 216,0.7),rgba(25, 108, 216,0.7)), url('../img/overlay-bg.jpg');
+    background-image: linear-gradient(to bottom ,rgba(25, 108, 216,0.7),rgba(25, 108, 216,0.7)), url('/img/overlay-bg.jpg');
     background-position: center center;
     background-color:rgb(70, 151, 237);
     background-attachment: fixed;
@@ -401,7 +406,7 @@ color: var(--darkercolor) ;
 .lastpage{
     width: 100%;
     height: auto;
-    background-image: linear-gradient(to bottom ,rgba(25, 108, 216,0.7),rgba(25, 108, 216,0.7)), url('../img/overlay-bg.jpg');
+    background-image: linear-gradient(to bottom ,rgba(25, 108, 216,0.7),rgba(25, 108, 216,0.7)), url('/img/overlay-bg.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -493,13 +498,15 @@ color: var(--darkercolor) ;
 /*  MQ */
 
 @media (min-width: 640px){
-
+    .travel{
+        margin-left: 60px;
+    }
 }
 /* medium devices */
 @media (min-width: 768px){
     .l .photo{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
     .ser .row {
         display: flex;
@@ -513,9 +520,7 @@ color: var(--darkercolor) ;
         display: flex;
         flex-direction: row;
     }
-    .travel{
-        margin-left: 150px;
-    }
+
     .content h3{
         font-size: 70px;
     }
@@ -525,8 +530,13 @@ color: var(--darkercolor) ;
 }
 /* large devices */
 @media (min-width: 1024px){
-    
-
+    .l .photo{
+        display: flex;
+        flex-direction: row;
+    }
+    .travel{
+        margin-left: 155px;
+    }
 }
 /* extra large devices */
 @media (min-width: 1280px){
